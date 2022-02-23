@@ -22,7 +22,10 @@
 <script>
   "use strict";
 
-  // Здесь пишем решение, данный комментарий необходимо стереть.
+  const tempC = +prompt('Введите тепрературу в градусах Цельсия');
+  const tempF = (9 / 5) * tempC + 32;
+
+  alert(`Цельсий: ${(Math.round(tempC * 100) / 100)}, Фаренгейт: ${(Math.round(tempF * 100) / 100)}`);
 </script>
 </body>
 </html>
