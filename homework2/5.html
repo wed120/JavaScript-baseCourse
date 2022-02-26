@@ -41,21 +41,19 @@ Infinity делать не нужно, однако, в случае если б
   * @return {NaN} Если параметр не верный выводится NaN.
   */ 
   function mathOperation(arg1, arg2, operation) {
-    if (operation == '+') {
+    if (operation === '+') {
       return sum(arg1, arg2);
     }
-    else if (operation == '-') {
+    if (operation === '-') {
       return difference(arg1, arg2);
     }
-    else if (operation == '*') {
+    if (operation === '*') {
       return multiplication(arg1, arg2);
     }
-    else if (operation == '/') {
+    if (operation === '/') {
       return division(arg1, arg2);
     }
-    else {
       return NaN;
-    }
   }
   
   /**
@@ -78,25 +76,25 @@ Infinity делать не нужно, однако, в случае если б
     return Math.abs(a - b);
 	}
 
-    /**
-    * Функция считает произведение чисел.
-    * @param {number} a - первое число.
-    * @param {number} b - второе число.
-    * @return {number} Считает произведение a и b.
-    */
-    function multiplication(a, b) {
-      return (a * b);
-    }
-
-    /**
-    * Функция считает произведение чисел.
-    * @param {number} a - первое число.
-    * @param {number} b - второе число.
-    * @return {number} Считает произведение a и b.
-    */
-    function division(a, b) {
-      return (a / b);
-    }
+  /**
+  * Функция считает произведение чисел.
+  * @param {number} a - первое число.
+  * @param {number} b - второе число.
+  * @return {number} Считает произведение a и b.
+  */
+  function multiplication(a, b) {
+    return (a * b);
+  }
+  
+  /**
+  * Функция считает произведение чисел.
+  * @param {number} a - первое число.
+  * @param {number} b - второе число.
+  * @return {number} Считает произведение a и b.
+  */
+  function division(a, b) {
+    return (a / b);
+  }
 
 </script>
 </body>
