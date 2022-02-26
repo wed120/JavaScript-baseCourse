@@ -20,8 +20,19 @@
 -->
 <script>
   "use strict";
+  
+  const firstNum = +prompt('Введите первое число');
+  const secondNum = +prompt('Введите второе число');
 
-  // Здесь пишем решение, данный комментарий необходимо стереть.
+  if (firstNum > 0 & secondNum > 0) {
+    alert(firstNum - secondNum);
+  } else if (firstNum < 0 & secondNum < 0) {
+    alert(firstNum * secondNum);
+  } else if (firstNum < 0 & secondNum > 0) {
+    alert(firstNum + secondNum);
+  } else if (firstNum > 0 & secondNum < 0) {
+    alert(firstNum + secondNum);
+  }
 </script>
 </body>
 </html>

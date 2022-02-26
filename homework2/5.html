@@ -32,7 +32,72 @@ Infinity делать не нужно, однако, в случае если б
 <script>
   "use strict";
 
-  // Здесь пишем решение, данный комментарий необходимо стереть.
+  /**
+  * Функция возвращает результат операции.
+  * @param {number} arg1 - первое число.
+  * @param {number} arg2 - второе число.
+  * @param {string} operation - операция('+','-','*','/').
+  * @return {number} Результат операции(operation) над числами (arg1,arg2).
+  * @return {NaN} Если параметр не верный выводится NaN.
+  */ 
+  function mathOperation(arg1, arg2, operation) {
+    if (operation == '+') {
+      return sum(arg1, arg2);
+    }
+    else if (operation == '-') {
+      return difference(arg1, arg2);
+    }
+    else if (operation == '*') {
+      return multiplication(arg1, arg2);
+    }
+    else if (operation == '/') {
+      return division(arg1, arg2);
+    }
+    else {
+      return NaN;
+    }
+  }
+  
+  /**
+  * Функция считает сумму чисел.
+  * @param {number} a - первое число.
+  * @param {number} b - второе число.
+  * @return {number} Считает сумму a и b.
+  */
+  function sum(a, b) {
+    return (a + b);
+  }
+  
+	/**
+	 * Функция считает разность чисел.
+	 * @param {number} a - первое число.
+	 * @param {number} b - второе число.
+	 * @return {number} Считает разницу чисел(из большего вычитает меньшее).
+	 */
+	function difference(a, b) {
+    return Math.abs(a - b);
+	}
+
+    /**
+    * Функция считает произведение чисел.
+    * @param {number} a - первое число.
+    * @param {number} b - второе число.
+    * @return {number} Считает произведение a и b.
+    */
+    function multiplication(a, b) {
+      return (a * b);
+    }
+
+    /**
+    * Функция считает произведение чисел.
+    * @param {number} a - первое число.
+    * @param {number} b - второе число.
+    * @return {number} Считает произведение a и b.
+    */
+    function division(a, b) {
+      return (a / b);
+    }
+
 </script>
 </body>
 </html>

@@ -25,22 +25,29 @@ console.log(declinationOfNumber(5, "стул", "стула", "стульев"));
 <script>
   "use strict";
 
+  /**
+   * Фунция подбирает слово в нужном роде.
+   * @param {number} count - Число для формы слова.
+   * @param {string} one - Слово в среднем роде.
+   * @param {string} two - Слово в женском роде.
+   * @param {string} five - Слово в мужском роде.
+   * @return {string} Слово в нужной форме.
+  */ 
   function declinationOfNumber(count, one, two, five) {
+    let tens = Math.abs(count) % 100;
+    let units = tens % 10;
 
-  }
-
-  // Число яблок, можно пробовать поставить свое целое, положительное число.
-  const applesNumber = 5;
-  // Получаем от функции одно из слов "яблоко", "яблока" или "яблок".
-  const word = declinationOfNumber(applesNumber, "яблоко", "яблока", "яблок");
-  // Выводим корректную строку, например:
-  // "У меня есть 1 яблоко."
-  // "У меня есть 2 яблока."
-  // "У меня есть 5 яблок."
-  // При любом целом, положительном числе в applesNumber, строка, которая
-  // выводится в console.log, должна иметь правильное склонение слова "яблоко".
-  console.log(`У меня есть ${applesNumber} ${word}.`);
-
+    if (tens >= 5 && tens <= 20) {
+      return five;
+    }
+    if (units > 1 && units < 5) {
+      return two;
+    }
+    if (units == 1) {
+      return one;
+    }
+      return five;
+    }  
 </script>
 </body>
 </html>
